@@ -15,13 +15,14 @@ sudo apt install mysql-server
 sudo apt install mysql
 ```
 - open port 3306 for mysql but only allow the mysql client IP for security purposes.
-[image]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/511453e6e7e19785069c707dcedff6c529114c84/PROJECT%205/port%20open.PNG)
 
 - configure MySQL server to allow connections from remote hosts
 ```
 sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf
 ```
-[image]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/973f01114f22ec09284270cfa12598fa975fca86/PROJECT%205/bind.PNG)
+
 - create a database and user on the server
 ```
 mysql> create database;
@@ -35,3 +36,5 @@ mysql> exit
 ```
 sudo mysql -u <user> -h <server private ip> -p
 ```
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/973f01114f22ec09284270cfa12598fa975fca86/PROJECT%205/success.PNG)
+
