@@ -13,12 +13,13 @@ ___
 ```
 lsblk
 ```
-[image]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/4efee14dd08608bba19af658303e17c283c333c5/PROJECT%206/lsblk%20commad%20output.PNG)
+
 - Check all mounts on the server and free space
 ```
 df -h
 ```
-[image]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/4efee14dd08608bba19af658303e17c283c333c5/PROJECT%206/df%20-h.PNG)
 
 - Use gdisk utility to create a single partition on each of the 3 disks
 
@@ -30,7 +31,7 @@ sudo yum install lvm2
 ```
 sudo lvmdiskscan
 ```
-[image]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/4efee14dd08608bba19af658303e17c283c333c5/PROJECT%206/lvmdiskscan.PNG)
 
 - Mark each of the 3 disks as physical volume
 ```
@@ -42,6 +43,8 @@ sudo pvcreate /dev/xvdh1
 ```
 sudo pvs
 ```
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/4efee14dd08608bba19af658303e17c283c333c5/PROJECT%206/sudo%20pvs.PNG)
+
 - add all 3 PVs to a volume group (VG). Name the VG webdata-vg
 ```
 sudo vgcreate webdata-vg /dev/xvdh1 /dev/xvdg1 /dev/xvdf1
@@ -50,6 +53,8 @@ sudo vgcreate webdata-vg /dev/xvdh1 /dev/xvdg1 /dev/xvdf1
 ```
 sudo vgs
 ```
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/4efee14dd08608bba19af658303e17c283c333c5/PROJECT%206/sudo%20vgs.PNG)
+
 - create 2 logical volumes. apps-lv (Use half of the PV size), and logs-lv Use the remaining space of the PV size
 ```
 sudo lvcreate -n apps-lv -L 14G webdata-vg
@@ -59,14 +64,14 @@ sudo lvcreate -n logs-lv -L 14G webdata-vg
 ```
 sudo lvs
 ```
-[image]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/4efee14dd08608bba19af658303e17c283c333c5/PROJECT%206/sudo%20lvs.PNG)
 
 - Verify the entire setup
 ```
 sudo vgdisplay -v #view complete setup - VG, PV, and LV
 sudo lsblk 
 ```
-[image]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/4efee14dd08608bba19af658303e17c283c333c5/PROJECT%206/lsblk2.PNG)
 
 - Format the logical volumes with ext4 filesystem
 ```
@@ -115,7 +120,7 @@ sudo mount -a
  ```
  df -h
  ```
- [image]
+ ![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/4efee14dd08608bba19af658303e17c283c333c5/PROJECT%206/df%20-h2.PNG)
 
  #
  Step 2 — Prepare the Database Server
@@ -211,13 +216,16 @@ sudo mysql -u admin -p -h <DB-Server-Private-IP-address>
 ```
 - Verify if you can successfully execute SHOW DATABASES; command and see a list of existing databases.
 
-[image]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/4efee14dd08608bba19af658303e17c283c333c5/PROJECT%206/showdatabases.PNG)
 
 - Change permissions and configuration so Apache could use WordPress:
 - Enable TCP port 80 in Inbound Rules configuration for your Web Server EC2 (enable from everywhere 0.0.0.0/0 or from your workstation’s IP)
 - 
 - Try to access from your browser the link to your WordPress http://<Web-Server-Public-IP-Address>/wordpress/
-[image]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/b5832af441e284e9c052b3bf9cf58e4333cf0e24/PROJECT%206/success.PNG)
+
+#
+SUCCESS
 
 
 
