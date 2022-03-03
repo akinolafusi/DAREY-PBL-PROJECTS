@@ -93,3 +93,77 @@ rpcinfo -p | grep nfs
  
 ## CONFIGURE THE DATABASE SERVER
 
+
+
+- Install Mysql
+```
+sudo yum install mysql-server
+```
+- make the database more secure by removing anonymous databases and access
+```
+sudo mysql_secure_installation
+```
+- Configure Mysql
+```
+mysql> Create database
+mysql> CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
+```
+## Prepare the Web Servers
+### STEPS
+- Configure NFS client (this step must be done on all three servers).
+- Deploy a Tooling application to our Web Servers into a shared NFS folder
+- Configure the Web Servers to work with a single MySQL database.
+***
+- Launch a new EC2 instance with RHEL 8 Operating System
+
+- Install NFS client
+```
+sudo yum install nfs-utils nfs4-acl-tools -y
+```
+- Mount /var/www/ and target the NFS server’s export for apps
+```
+sudo mkdir /var/www
+sudo mount -t nfs -o rw,nosuid <NFS-Server-Private-IP-Address>:/mnt/apps /var/www
+```
+- Verify that NFS was mounted successfully
+```
+df -h
+```
+[image]
+- To make sure mount persists after reboot
+```
+sudo vi /etc/fstab
+```
+Add the following line
+```
+<NFS-Server-Private-IP-Address>:/mnt/apps /var/www nfs defaults 0 
+```
+[image]
+
+- After saving the file run
+```
+sudo systemctl daemon-reload
+```
+- Install Remi’s repository, Apache and PHP
+```
+sudo yum install httpd -y
+
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
+
+sudo dnf install dnf-utils http://rpms.remirepo.net/enterprise/remi-release-8.rpm
+
+sudo dnf module reset php
+
+sudo dnf module enable php:remi-7.4
+
+sudo dnf install php php-opcache php-gd php-curl php-mysqlnd
+
+sudo systemctl start php-fpm
+
+sudo systemctl enable php-fpm
+
+setsebool -P httpd_execmem 1
+```
+- The above configurations were done on one of the webservers. Instead of creating additional two webservers and then repeat all the configurations on them, I created an image of the first server then launched additional two webservers from that.
+
