@@ -167,3 +167,4 @@ setsebool -P httpd_execmem 1
 ```
 - The above configurations were done on one of the webservers. Instead of creating additional two webservers and then repeat all the configurations on them, I created an image of the first server then launched additional two webservers from that.
 
+[image]
