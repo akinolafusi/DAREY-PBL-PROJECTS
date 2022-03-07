@@ -30,11 +30,11 @@ The UUID of the device will be used to update the /etc/fstab file
 ```
 sudo blkid
 ```
-[image]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/aa488aeb90bc873dfc03cefbe283e19108f922cb/PROJECT%207/blkid.PNG)
 ```
 sudo vi /etc/fstab
 ```
-[image]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/aa488aeb90bc873dfc03cefbe283e19108f922cb/PROJECT%207/fstab.PNG)
 
 - Test the configuration
 ```
@@ -48,7 +48,7 @@ Verify the setup
 ```
 df -h
 ```
-[image]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/aa488aeb90bc873dfc03cefbe283e19108f922cb/PROJECT%207/df%20-h.PNG)
 
 ### Install NFS server, configure it to start on reboot and make sure it is u and running ###
 
@@ -130,7 +130,7 @@ sudo mount -t nfs -o rw,nosuid <NFS-Server-Private-IP-Address>:/mnt/apps /var/ww
 ```
 df -h
 ```
-[image]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/aa488aeb90bc873dfc03cefbe283e19108f922cb/PROJECT%207/df%20-h%20web.PNG)
 - To make sure mount persists after reboot
 ```
 sudo vi /etc/fstab
@@ -139,7 +139,7 @@ Add the following line
 ```
 <NFS-Server-Private-IP-Address>:/mnt/apps /var/www nfs defaults 0 
 ```
-[image]
+
 
 - After saving the file run
 ```
@@ -167,4 +167,4 @@ setsebool -P httpd_execmem 1
 ```
 - The above configurations were done on one of the webservers. Instead of creating additional two webservers and then repeat all the configurations on them, I created an image of the first server then launched additional two webservers from that.
 
-[image]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/076406e0e6688db03b26b6908d053e53d0c52675/PROJECT%207/webpage.PNG)
