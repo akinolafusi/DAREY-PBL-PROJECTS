@@ -29,7 +29,7 @@ sudo apt-get install jenkins
 ```
 http://<Jenkins-Server-Public-IP-Address-or-Public-DNS-Name>:8080
 ```
-[image]
+![]https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/3543bb45974bde363b83dc6e44e6c5027242caa6/project%209/jenkins%20getting%20dtrsted.PNG
 
 - Retrieve it from your server
 ```
@@ -44,21 +44,21 @@ Step 2 – Configure Jenkins to retrieve source codes from GitHub using Webhooks
 - Add the URL from the project in Github Repo and paste it as the source code in Jenkins
 - save the configuration and use the build button in the Project to start the first  build.
 
-[image]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/e03459192fefd726a83a52ed59b4f638c56f5e26/project%209/build%201.PNG)
 
 - Click "Configure" your job/project and add these two configurations
 Configure triggering the job from GitHub webhook
 
-[image]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/e03459192fefd726a83a52ed59b4f638c56f5e26/project%209/build%20trigger.PNG)
 
 - Configure "Post-build Actions" to archive all the files into **
 
-[image]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/e03459192fefd726a83a52ed59b4f638c56f5e26/project%209/artifacts.PNG)
 
 - Now, go ahead and make some change in any file in your GitHub repository (e.g. README.MD file) and push the changes to the master branch.
 A build will be triggered automatically using the webhook configured earlier.
 
-[image]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/e03459192fefd726a83a52ed59b4f638c56f5e26/project%209/Build%202.PNG)
 
 - By default, the artifacts are stored on Jenkins server locally
 ```
@@ -83,5 +83,14 @@ Navigate to Manage jenkings >>> Configuration system >>> Publish over ssh
 ```
 - Test the configuration and make sure the connection returns Success
 
-[image]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/e03459192fefd726a83a52ed59b4f638c56f5e26/project%209/test-success.jpg)
+
+- Save this configuration and go ahead, change something in README.MD file in your GitHub Tooling repository.
+
+Webhook will trigger a new job and in the "Console Output" of the job you will find something like this:
+```
+SSH: Transferred 25 file(s)
+Finished: SUCCESS
+```
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/82f045588f03715f7e989bbd04619f8b6c7ad421/project%209/success.PNG)
 
