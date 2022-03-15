@@ -8,7 +8,7 @@ CONFIGURE NGINX AS A LOAD BALANCE
  
  - Update /etc/hosts file for local DNS with Web Servers’ names (e.g. Web1 and Web2) and their local IP addresses
  
- [image]
+ ![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/48b5c915b4461ce749af32ca48dcad5e0823b8e2/PROJECT%2010/hosts.PNG)
 
  - Update the instance and Install Nginx
 
@@ -42,7 +42,7 @@ REGISTER A NEW DOMAIN NAME AND CONFIGURE SECURED CONNECTION USING SSL/TLS CERTIF
 - Assign an Elastic IP to your Nginx LB server and associate your domain name with this Elastic IP
 - Update A record in your registrar to point to Nginx LB using Elastic IP address
 
-[image]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/48b5c915b4461ce749af32ca48dcad5e0823b8e2/PROJECT%2010/DNS.PNG)
 
 - Configure Nginx to recognize your new domain name
 Update your nginx.conf with server_name www.<your-domain-name.com> instead of server_name www.domain.com
@@ -61,9 +61,12 @@ sudo snap install --classic certbot
 sudo ln -s /snap/bin/certbot /usr/bin/certbot
 sudo certbot --nginx
 ```
+
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/48b5c915b4461ce749af32ca48dcad5e0823b8e2/PROJECT%2010/cert.PNG)
+
 - Test secured access to your Web Solution by trying to reach https://devopsmaestro.com
 
-[image]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/48b5c915b4461ce749af32ca48dcad5e0823b8e2/PROJECT%2010/cert2.PNG)
 
 - Set up periodical renewal of your SSL/TLS certificate
 
