@@ -14,26 +14,29 @@ sudo apt update
 
 sudo apt install ansible
 ```
-- Configure Jenkins build job to save your repository content every time you change it
+- Verify Ansible is installed
+```
+ansible --version
+```
 
-[image]
+![] (https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/d396c302ab0a64c413bd5ec83fc5714f9d09a9f3/PROJECT%2011/ansible%20version.PNG)
+
+- Configure Jenkins build job to save your repository content every time you change it
 
 - Create a new Freestyle project ansible in Jenkins and point it to your ‘ansible-config-mgt’ repository.
 
-[image]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/d396c302ab0a64c413bd5ec83fc5714f9d09a9f3/PROJECT%2011/freestyle.PNG)
 
 - Configure Webhook in GitHub and set webhook to trigger ansible build
 
-[image]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/d396c302ab0a64c413bd5ec83fc5714f9d09a9f3/PROJECT%2011/webhook.PNG)
 
 - Configure a Post-build job to save all (**) files
 
-[image]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/d396c302ab0a64c413bd5ec83fc5714f9d09a9f3/PROJECT%2011/postbuild.PNG)
 
 -  Test  setup by making some change in README.MD file in master branch and make sure that builds starts automatically and Jenkins saves the files (build artifacts) in following folder
- 
- [image
-]
+
 
 ```
 ls /var/lib/jenkins/jobs/ansible/builds/<build_number>/archive/
@@ -53,7 +56,7 @@ Step 3 - BEGIN ANSIBLE DEVELOPMENT
 
 -  Create a new branch in respository that will be used for development.
 
-[image]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/d396c302ab0a64c413bd5ec83fc5714f9d09a9f3/PROJECT%2011/branch.PNG)
 
 - Create a directory and name it playbooks – it will be used to store all playbook files.
 - Create a directory and name it inventory – it will be used to keep the hosts organised.
@@ -93,6 +96,8 @@ ssh -A ubuntu@public-ip
 [lb]
 <Load-Balancer-Private-IP-Address> ansible_ssh_user='ubuntu'
 ```
+
+![]
 ##
 Step 5 – Create a Common Playbook
 ##
