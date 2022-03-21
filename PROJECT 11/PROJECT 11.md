@@ -150,7 +150,7 @@ Step 7 – Run first Ansible test
 ```
 ansible-playbook -i /var/lib/jenkins/jobs/ansible/builds/<build-number>/archive/inventory/dev.yml /var/lib/jenkins/jobs/ansible/builds/<build-number>/archive/playbooks/common.yml
 ```
-1[](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/d396c302ab0a64c413bd5ec83fc5714f9d09a9f3/PROJECT%2011/ans%20succ.PNG)
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/d396c302ab0a64c413bd5ec83fc5714f9d09a9f3/PROJECT%2011/ans%20succ.PNG)
 
 - Optional step – Repeat once again
 - Update the ansible playbook with some new Ansible tasks and go through the full checkout -> change codes -> commit -> PR -> merge -> build -> ansible-playbook
