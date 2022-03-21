@@ -97,7 +97,7 @@ ssh -A ubuntu@public-ip
 <Load-Balancer-Private-IP-Address> ansible_ssh_user='ubuntu'
 ```
 
-![]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/5906fdf64a3ab4426748cae490e5f079c1b8e9b5/PROJECT%2011/dev.PNG)
 ##
 Step 5 – Create a Common Playbook
 ##
@@ -132,13 +132,14 @@ Step 5 – Create a Common Playbook
         state: latest
 ```
 
-[image]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/d396c302ab0a64c413bd5ec83fc5714f9d09a9f3/PROJECT%2011/common.PNG)
 
 ##
 Step 6 – Update GIT with the latest code
 ##
 
 - Raise a Pull Request (PR) on github, get the branch peer reviewed and merged to the master branch.
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/d396c302ab0a64c413bd5ec83fc5714f9d09a9f3/PROJECT%2011/PR.PNG)
 - Once your code changes appear in master branch – Jenkins will do its job and save all the files (build artifacts) to /var/lib/jenkins/jobs/ansible/builds/<build_number>/archive/ directory on Jenkins-Ansible server.
 
 ##
@@ -149,6 +150,7 @@ Step 7 – Run first Ansible test
 ```
 ansible-playbook -i /var/lib/jenkins/jobs/ansible/builds/<build-number>/archive/inventory/dev.yml /var/lib/jenkins/jobs/ansible/builds/<build-number>/archive/playbooks/common.yml
 ```
+1[](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/d396c302ab0a64c413bd5ec83fc5714f9d09a9f3/PROJECT%2011/ans%20succ.PNG)
 
 - Optional step – Repeat once again
 - Update the ansible playbook with some new Ansible tasks and go through the full checkout -> change codes -> commit -> PR -> merge -> build -> ansible-playbook
