@@ -19,16 +19,16 @@ chmod -R 0777 /home/ubuntu/ansible-config-artifact
 
 - Create a New freestyle project with the name save_artifact. The project will be triggered after the completion of Ansible freestle project.
 
-[image]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/b53aeb5b543b23822db20f75b658307b6af2a408/PROJECT%2012/saveart1.PNG)
 
 - The saved artifacts will be sent to /home/ubuntu/ansible-config-artifact which is achieved by creating a build step and choose copy artifacts from other project.
 
-[image]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/b53aeb5b543b23822db20f75b658307b6af2a408/PROJECT%2012/saveart2.PNG)
 
 - Test by making a change in the code on Github. The saved artifact will be seen in 
 /home/ubuntu/ansible-config-artifact
 
-[image]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/b53aeb5b543b23822db20f75b658307b6af2a408/PROJECT%2012/savedartinubuntu.PNG)
 
 - ##
 REFACTOR ANSIBLE CODE BY IMPORTING OTHER PLAYBOOKS INTO SITE.YML
@@ -101,11 +101,11 @@ ansible-galaxy init webserver
 <Web1-UAT-Server-Private-IP-Address> ansible_ssh_user='ec2-user' ansible_ssh_private_key_file=<path-to-.pem-private-key>
 <Web2-UAT-Server-Private-IP-Address> ansible_ssh_user='ec2-user' ansible_ssh_private_key_file=<path-to-.pem-private-key>
 ```
-[image]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/b53aeb5b543b23822db20f75b658307b6af2a408/PROJECT%2012/uat%20servers.PNG)
 
 - In /etc/ansible/ansible.cfg file uncomment roles_path string and provide a full path to your roles directory roles_path    = /home/ubuntu/ansible-config-mgt/roles, so Ansible could know where to find configured roles.
 
-[image]
+![]
 
 - Add more logic to the webserver role. Inside the tasks director of the role, add some configuration into main.yml
 ```
