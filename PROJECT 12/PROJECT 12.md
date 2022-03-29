@@ -181,4 +181,4 @@ sudo ansible-playbook -i /home/ubuntu/ansible-config-mgt/inventory/uat.yml /home
 
 - Try to reach any of the UAT server from the web
 
-![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/c6c343b03f05679a9e39530b1a5d0766ea8c67fc/PROJECT%2012/PROJECT%2012.md)
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/b53aeb5b543b23822db20f75b658307b6af2a408/PROJECT%2012/propitix.PNG)
