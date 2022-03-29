@@ -105,7 +105,7 @@ ansible-galaxy init webserver
 
 - In /etc/ansible/ansible.cfg file uncomment roles_path string and provide a full path to your roles directory roles_path    = /home/ubuntu/ansible-config-mgt/roles, so Ansible could know where to find configured roles.
 
-![]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/c6c343b03f05679a9e39530b1a5d0766ea8c67fc/PROJECT%2012/ansconfig.PNG)
 
 - Add more logic to the webserver role. Inside the tasks director of the role, add some configuration into main.yml
 ```
@@ -177,4 +177,8 @@ Step 5 – Commit & Test
 ```
 sudo ansible-playbook -i /home/ubuntu/ansible-config-mgt/inventory/uat.yml /home/ubuntu/ansible-config-mgt/playbooks/site.yaml
 ```
-[image]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/b53aeb5b543b23822db20f75b658307b6af2a408/PROJECT%2012/anssucces.PNG)
+
+- Try to reach any of the UAT server from the web
+
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/c6c343b03f05679a9e39530b1a5d0766ea8c67fc/PROJECT%2012/PROJECT%2012.md)
