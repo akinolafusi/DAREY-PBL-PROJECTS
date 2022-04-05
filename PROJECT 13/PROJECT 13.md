@@ -47,7 +47,7 @@ UPDATE SITE.YML WITH DYNAMIC ASSIGNMENTS
   import_playbook: ../static-assignments/webservers.yml
 ```
 
-![]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/bfe2762c9bd9b0cfc582e5f1105c40c3280a1d10/PROJECT%2013/site.PNG)
 
 # 
 Download Mysql Ansible Role, We will be using a MySQL role developed by geerlingguy.
@@ -62,7 +62,7 @@ git switch roles-feature
 ```
 - Inside roles directory create the new MySQL role with
 
-[image]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/a31fab0c9e30895123246a8ca71c9b2014fff2bd/PROJECT%2013/geerlin.PNG)
 ```
 ansible-galaxy install geerlingguy.mysql
 ```
@@ -79,7 +79,7 @@ git push --set-upstream origin roles-feature
 ```
 - Create a Pull Request and merge it to main branch on GitHub.
 
-[image]
+![]()https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/a31fab0c9e30895123246a8ca71c9b2014fff2bd/PROJECT%2013/pullr.PNG
 
 #
 LOAD BALANCER ROLES
@@ -88,11 +88,10 @@ LOAD BALANCER ROLES
 
 - Declare a variable in defaults/main.yml file inside the Nginx and Apache roles. Name each variables enable_nginx_lb and enable_apache_lb respectively and set both values to false
 
-[image]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/a31fab0c9e30895123246a8ca71c9b2014fff2bd/PROJECT%2013/deaultsmain.PNG)
 
 - Declare another variable in both roles load_balancer_is_required and set its value to false as well
 
-[image]
 
 - Update both assignment and site.yml files respectively
 loadbalancers.yml
