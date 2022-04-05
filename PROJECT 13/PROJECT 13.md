@@ -25,7 +25,7 @@ Introducing Dynamic Assignment Into Our structure
         - always
 ```
 
-[image]
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/a31fab0c9e30895123246a8ca71c9b2014fff2bd/PROJECT%2013/deaultsmain.PNG)
 
 ##
 UPDATE SITE.YML WITH DYNAMIC ASSIGNMENTS
@@ -47,7 +47,7 @@ UPDATE SITE.YML WITH DYNAMIC ASSIGNMENTS
   import_playbook: ../static-assignments/webservers.yml
 ```
 
-[image]
+![]
 
 # 
 Download Mysql Ansible Role, We will be using a MySQL role developed by geerlingguy.
