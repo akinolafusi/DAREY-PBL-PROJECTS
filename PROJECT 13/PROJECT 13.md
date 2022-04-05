@@ -62,7 +62,7 @@ git switch roles-feature
 ```
 - Inside roles directory create the new MySQL role with
 
-![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/a31fab0c9e30895123246a8ca71c9b2014fff2bd/PROJECT%2013/geerlin.PNG)
+![](https://github.com/akinolafusi/DAREY-PBL-PROJECTS/blob/a31fab0c9e30895123246a8ca71c9b2014fff2bd/PROJECT%2013/pullr.PNG)
 ```
 ansible-galaxy install geerlingguy.mysql
 ```
